@@ -48,9 +48,11 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
         // borders
         g.setColor(Color.yellow);
-        g.fillRect(0,0,3,592);
-        g.fillRect(0,0,692,3);
-        g.fillRect(691,0,3,592);
+        g.fillRect(0, 0, 3, 592);
+        g.fillRect(689, 0, 3, 592);
+        g.fillRect(0, 0, 692, 3);
+        g.fillRect(0, 0, 3, 592);
+
 
         // Paddle (barre)
         g.setColor(Color.green);
@@ -81,8 +83,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         // Vérifie si la touche "flèche droite" a été pressée.
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             // Vérifie si la raquette est déjà à la position la plus à droite possible. Si c'est le cas, la position de la raquette est fixée à 600 pixels
-            if (playerX >= 600) {
-                playerX = 600;
+            if (playerX >= 595) {
+                playerX = 595;
             } else {
                 moveRight();
             }

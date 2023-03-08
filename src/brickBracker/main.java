@@ -15,7 +15,7 @@ public class main {
         GamePlay gamePlay = new GamePlay();
 
         // définit les dimensions de la fenêtre JFrame "obj"
-        obj.setBounds(10, 10, 700, 600);
+        obj.setBounds(10, 10, 708, 600);
 
         // définit le titre de la fenêtre JFrame "obj"
         obj.setTitle("Breakout Ball");

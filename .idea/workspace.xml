@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="moveRight et moveLeft définit">
+    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Correction problème timer GamePlay.java, typo erreur">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/brickBracker/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brickBracker/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678284390767</updated>
-      <workItem from="1678284391946" duration="6301000" />
+      <workItem from="1678284391946" duration="9206000" />
     </task>
     <task id="LOCAL-00001" summary="Début du mini jeu en java. Création main.java avec les obj + début du GamePlay.java">
       <created>1678285731281</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678290539726</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Correction problème timer GamePlay.java, typo erreur">
+      <created>1678291455867</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678291455867</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +145,7 @@
     <MESSAGE value="Ajout du style Background, border, paddle et balle, paint" />
     <MESSAGE value="Methode KeyPressed fini, ajout des détections + position maximal de la raquette droite et gauche. moveLeft / moveRight pas encore définit." />
     <MESSAGE value="moveRight et moveLeft définit" />
-    <option name="LAST_COMMIT_MESSAGE" value="moveRight et moveLeft définit" />
+    <MESSAGE value="Correction problème timer GamePlay.java, typo erreur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction problème timer GamePlay.java, typo erreur" />
   </component>
 </project>
