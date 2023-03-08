@@ -72,6 +72,19 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.yellow);
         g.fillOval(ballposX, ballposY, 20, 20);
 
+        if (ballposY > 570) { // Vérifie si la position verticale de la balle dépasse la position maximale du bas de la zone de jeu.
+            play = false; // Arrête le jeu en mettant la variable play à false.
+            // Arrête le mouvement de la balle en mettant ses directions horizontale et verticale à 0.
+            ballYdir = 0;
+            ballXdir = 0;
+            g.setColor(Color.RED);
+            g.setFont(new Font("serif", Font.BOLD, 30));
+            g.drawString("Game Over, Scores: ", 190, 300);
+
+            g.setFont(new Font("serif", Font.BOLD, 30));
+            g.drawString("Appuyer sur Entrer pour Recommencer", 92, 350);
+        }
+
         g.dispose(); // dispose permet de libéré des ressources et de nettoyer la mémoire.
     }
 
@@ -170,6 +183,21 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
                 playerX = 10;
             } else {
                 moveLeft();
+            }
+        }
+        if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+            if(!play) {
+                play = true;
+                ballposX = 120;
+                ballposY = 350;
+                ballXdir = -4;
+                ballYdir = -8;
+                playerX = 310;
+                score = 0;
+                totalBricks = 21;
+                map = new MapGenerator(3, 7);
+
+                repaint();
             }
         }
     }
