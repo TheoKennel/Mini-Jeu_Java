@@ -8,6 +8,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import javax.swing.Timer;
+
+
 
 // Déclaration de la classe GamePlay qui étend la classe JPanel et implémente les interfaces KeyListener et ActionListener
 public class GamePlay extends JPanel implements KeyListener, ActionListener {
@@ -18,7 +21,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
     private int totalBricks = 21;
 
     // Timer pour gérer les mouvements de la balle
-    private Timer time;
+    private Timer timer;
     private int delay = 8;
 
     // Positions de départ de la balle et du joueur
@@ -40,7 +43,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
     public void paint(Graphics g) {
         // Background
-        g.setColor(Color.BLACK);
+        g.setColor(Color.black);
         g.fillRect(1,1,692, 592);
 
         // borders
@@ -55,13 +58,16 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
         // Balle
         g.setColor(Color.yellow);
-        g.fillRect(ballposX, ballposY, 20, 20);
+        g.fillOval(ballposX, ballposY, 20, 20);
+
+        g.dispose();
     }
 
     // Implémentation de la méthode actionPerformed de l'interface ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        timer.start();
+        repaint();
     }
 
     @Override
