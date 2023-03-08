@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Ajout du style Background, border, paddle et balle, paint">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Methode KeyPressed fini, ajout des détections + position maximal de la raquette droite et gauche. moveLeft / moveRight pas encore définit.">
       <change beforePath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678284390767</updated>
-      <workItem from="1678284391946" duration="5300000" />
+      <workItem from="1678284391946" duration="5391000" />
     </task>
     <task id="LOCAL-00001" summary="Début du mini jeu en java. Création main.java avec les obj + début du GamePlay.java">
       <created>1678285731281</created>
@@ -100,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678289640104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Methode KeyPressed fini, ajout des détections + position maximal de la raquette droite et gauche. moveLeft / moveRight pas encore définit.">
+      <created>1678290500871</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678290500871</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +127,7 @@
     <MESSAGE value="Début du mini jeu en java. Création main.java avec les obj + début du GamePlay.java" />
     <MESSAGE value="Ajout de commentaire détailler" />
     <MESSAGE value="Ajout du style Background, border, paddle et balle, paint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout du style Background, border, paddle et balle, paint" />
+    <MESSAGE value="Methode KeyPressed fini, ajout des détections + position maximal de la raquette droite et gauche. moveLeft / moveRight pas encore définit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Methode KeyPressed fini, ajout des détections + position maximal de la raquette droite et gauche. moveLeft / moveRight pas encore définit." />
   </component>
 </project>
