@@ -62,15 +62,39 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.yellow);
         g.fillOval(ballposX, ballposY, 20, 20);
 
-        g.dispose();
+        g.dispose(); // dispose permet de libéré des ressources et de nettoyer la mémoire.
     }
 
     // Implémentation de la méthode actionPerformed de l'interface ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
-        timer.start();
-        repaint();
+        timer.start(); // Démarre le timer
+
+
+        if(play) { // Si le jeu est en cours
+            // Si la balle touche la raquette
+            if(new Rectangle(ballposX, ballposY, 20,20).intersects(new Rectangle(playerX, 550, 100, 8))) {
+                ballYdir = -ballYdir; // Inverse la direction verticale de la balle
+            }
+
+            // Met à jour la position de la balle en ajoutant la direction horizontale et verticale
+            ballposX += ballXdir;
+            ballposY += ballYdir;
+
+            if(ballposX < 0 ) { // Si la balle touche la bordure gauche
+                ballXdir =- ballXdir; // Inverse la direction horizontale de la balle
+            }
+            if(ballposY < 0 ) { // Si la balle touche la bordure supérieure
+                ballYdir =- ballYdir; // Inverse la direction verticale de la balle
+            }
+            if(ballposX > 670 ) { // Si la balle touche la bordure droite
+                ballXdir =- ballXdir; // Inverse la direction horizontale de la balle
+            }
+        }
+
+        repaint(); // Redessine la balle et la raquette
     }
+
 
     @Override
     public void keyTyped(KeyEvent e) {}
