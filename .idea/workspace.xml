@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Ajout du style pour le score (dans paint), score fini">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" afterDir="false" />
-    </list>
+    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Ajout condition style : Game over, Recommencer + Ajout keyEvent recommencer quand appuyer sur Enter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678284390767</updated>
-      <workItem from="1678284391946" duration="18859000" />
+      <workItem from="1678284391946" duration="19288000" />
     </task>
     <task id="LOCAL-00001" summary="Début du mini jeu en java. Création main.java avec les obj + début du GamePlay.java">
       <created>1678285731281</created>
@@ -184,7 +181,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678306849788</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Ajout condition style : Game over, Recommencer + Ajout keyEvent recommencer quand appuyer sur Enter">
+      <created>1678308840065</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308840065</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Ajout condition style : Game over, Recommencer + Ajout keyEvent recommencer quand appuyer sur Enter">
+      <created>1678308901151</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678308901151</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +228,7 @@
     <MESSAGE value="Modification du delay et direction de la balle pour augmenter la vitesse de celle-ci + reduction du delay lorsque la balle touche la raquette." />
     <MESSAGE value="Commentaire timer" />
     <MESSAGE value="Ajout du style pour le score (dans paint), score fini" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout du style pour le score (dans paint), score fini" />
+    <MESSAGE value="Ajout condition style : Game over, Recommencer + Ajout keyEvent recommencer quand appuyer sur Enter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout condition style : Game over, Recommencer + Ajout keyEvent recommencer quand appuyer sur Enter" />
   </component>
 </project>

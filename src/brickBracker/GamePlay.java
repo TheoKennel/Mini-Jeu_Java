@@ -72,6 +72,18 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.yellow);
         g.fillOval(ballposX, ballposY, 20, 20);
 
+        if(totalBricks <= 0) {
+            play = false;
+            ballYdir = 0;
+            ballXdir = 0;
+            g.setColor(Color.RED);
+            g.setFont(new Font("serif", Font.BOLD, 30));
+            g.drawString("You Won: ", 260, 300);
+
+            g.setFont(new Font("serif", Font.BOLD, 30));
+            g.drawString("Appuyer sur Entrer pour Recommencer", 92, 350);
+        }
+
         if (ballposY > 570) { // Vérifie si la position verticale de la balle dépasse la position maximale du bas de la zone de jeu.
             play = false; // Arrête le jeu en mettant la variable play à false.
             // Arrête le mouvement de la balle en mettant ses directions horizontale et verticale à 0.
