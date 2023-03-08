@@ -81,6 +81,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
             // Si la balle touche la raquette
             if(new Rectangle(ballposX, ballposY, 20,20).intersects(new Rectangle(playerX, 550, 100, 8))) {
                 ballYdir = -ballYdir; // Inverse la direction verticale de la balle
+
+                // Augmente la vitesse balle + raquette à chaque fois que la balle touche la raquette.
                 delay-= 2;
                 timer.setDelay(delay);
             }
