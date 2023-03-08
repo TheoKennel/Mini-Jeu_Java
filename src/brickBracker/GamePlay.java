@@ -22,7 +22,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
     // Timer pour gérer les mouvements de la balle
     private Timer timer;
-    private int delay = 8;
+    private int delay = 26;
 
     // Positions de départ de la balle et du joueur
     private int playerX = 310;
@@ -30,8 +30,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
     private int ballposY = 350;
 
     // Directions initiales de la balle
-    private int ballXdir = -1;
-    private int ballYdir = -2;
+    private int ballXdir = -4;
+    private int ballYdir = -8;
 
     private MapGenerator map;
 
@@ -81,6 +81,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
             // Si la balle touche la raquette
             if(new Rectangle(ballposX, ballposY, 20,20).intersects(new Rectangle(playerX, 550, 100, 8))) {
                 ballYdir = -ballYdir; // Inverse la direction verticale de la balle
+                delay-= 2;
+                timer.setDelay(delay);
             }
 
             // Boucle à travers les briques de la carte pour détecter les collisions avec la balle
