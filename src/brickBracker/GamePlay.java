@@ -83,6 +83,44 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
                 ballYdir = -ballYdir; // Inverse la direction verticale de la balle
             }
 
+            // Boucle à travers les briques de la carte pour détecter les collisions avec la balle
+            A: for(int i = 0; i<map.map.length; i++) {
+                for(int j = 0; j<map.map[0].length; j++) {
+                    // Vérifie si la brique est toujours présente sur la carte
+                    if(map.map[i][j] > 0 ) {
+                        // Calcule les coordonnées et les dimensions de la brique
+                        int brickX = j * map.brickWidth + 80;
+                        int brickY = i * map.brickHeight + 50;
+                        int brickWidth = map.brickWidth;
+                        int brickHeight = map.brickHeight;
+
+                        // Crée un objet Rectangle pour la brique, la balle et la zone d'impact
+                        Rectangle rect = new Rectangle(brickX, brickY, brickWidth, brickHeight);
+                        Rectangle ballRect = new Rectangle(ballposX, ballposY, 20, 20);
+                        Rectangle brickRect = rect;
+
+                        // Vérifie si la balle a touché la brique
+                        if(ballRect.intersects(brickRect)) {
+                            // Met à jour la carte pour indiquer que la brique a été détruite
+                            map.setBrickValue(0, i, j);
+                            // Met à jour le nombre total de briques restantes sur la carte
+                            totalBricks--;
+                            // Augmente le score du joueur
+                            score += 5;
+
+                            // Calcule la direction de la balle après l'impact
+                            if (ballposX + 19 <= brickRect.x || ballposX +1 >= brickRect.x + brickRect.width) {
+                                ballXdir = -ballXdir;
+                            } else {
+                                ballYdir = -ballYdir;
+                            }
+                            // Sort de la boucle pour éviter de gérer les collisions avec d'autres briques
+                            break A;
+                        }
+                    }
+                }
+            }
+
             // Met à jour la position de la balle en ajoutant la direction horizontale et verticale
             ballposX += ballXdir;
             ballposY += ballYdir;
