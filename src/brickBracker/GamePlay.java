@@ -64,21 +64,34 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
     }
 
-    // Implémentation de la méthode keyTyped de l'interface KeyListener
     @Override
-    public void keyTyped(KeyEvent e) {
-
-    }
+    public void keyTyped(KeyEvent e) {}
+    @Override
+    public void keyReleased(KeyEvent e) {}
 
     // Implémentation de la méthode keyPressed de l'interface KeyListener
     @Override
     public void keyPressed(KeyEvent e) {
-
+        // Vérifie si la touche "flèche droite" a été pressée.
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            // Vérifie si la raquette est déjà à la position la plus à droite possible. Si c'est le cas, la position de la raquette est fixée à 600 pixels
+            if (playerX >= 600) {
+                playerX = 600;
+            } else {
+                moveRight();
+            }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            if (playerX < 10) {
+                playerX = 10;
+            } else {
+                moveLeft();
+            }
+        }
     }
 
-    // Implémentation de la méthode keyReleased de l'interface KeyListener
-    @Override
-    public void keyReleased(KeyEvent e) {
 
-    }
+
+
 }
+
