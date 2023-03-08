@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Modification du delay et direction de la balle pour augmenter la vitesse de celle-ci + reduction du delay lorsque la balle touche la raquette.">
+    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Commentaire timer">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678284390767</updated>
-      <workItem from="1678284391946" duration="16467000" />
+      <workItem from="1678284391946" duration="17212000" />
     </task>
     <task id="LOCAL-00001" summary="Début du mini jeu en java. Création main.java avec les obj + début du GamePlay.java">
       <created>1678285731281</created>
@@ -169,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678305914308</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Commentaire timer">
+      <created>1678305966920</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678305966920</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +208,7 @@
     <MESSAGE value="Methode pour modifier la value de la bricks" />
     <MESSAGE value="boucle A qui permet si collision met à jour la carte, supprime, modifie la direction de la balle" />
     <MESSAGE value="Modification du delay et direction de la balle pour augmenter la vitesse de celle-ci + reduction du delay lorsque la balle touche la raquette." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification du delay et direction de la balle pour augmenter la vitesse de celle-ci + reduction du delay lorsque la balle touche la raquette." />
+    <MESSAGE value="Commentaire timer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commentaire timer" />
   </component>
 </project>
