@@ -35,6 +35,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
     private MapGenerator map;
 
+    private int level = 1;
+
     public GamePlay() {
         map = new MapGenerator(3,7);
         addKeyListener(this);
@@ -42,6 +44,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         setFocusTraversalKeysEnabled(false);
         timer = new Timer(delay, this);
         timer.start();
+        setupLevel(level);
     }
 
     public void paint(Graphics g) {
@@ -64,6 +67,11 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         g.setFont(new Font("serif", Font.BOLD, 25));
         g.drawString(""+score, 590, 30);
 
+        //levels
+        g.setColor(Color.BLUE);
+        g.setFont(new Font("serif", Font.BOLD, 25));
+        g.drawString(""+level, 550, 30);
+
         // Paddle (barre)
         g.setColor(Color.green);
         g.fillRect(playerX, 550, 100, 8);
@@ -82,6 +90,10 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
             g.setFont(new Font("serif", Font.BOLD, 30));
             g.drawString("Appuyer sur Entrer pour Recommencer", 92, 350);
+
+            // Passe au niveau suivant
+            level++;
+            setupLevel(level);
         }
 
         if (ballposY > 570) { // Vérifie si la position verticale de la balle dépasse la position maximale du bas de la zone de jeu.
@@ -98,6 +110,32 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
         }
 
         g.dispose(); // dispose permet de libéré des ressources et de nettoyer la mémoire.
+    }
+
+    public void setupLevel(int level) {
+        switch (level) {
+            case 1:
+                map = new MapGenerator(3, 7); // Crée une carte avec 3 lignes et 7 colonnes
+                delay = 26; // Définit la vitesse initiale de la balle
+                totalBricks = 21; // Définit le nombre total de briques dans le niveau
+                ballXdir = -2; // Définit la direction horizontale initiale de la balle
+                ballYdir = -4; // Définit la direction verticale initiale de la balle
+                break;
+            case 2:
+                map = new MapGenerator(4, 8); // Crée une carte avec 4 lignes et 8 colonnes
+                delay = 20; // Augmente la vitesse de la balle
+                totalBricks = 32; // Augmente le nombre total de briques
+                ballXdir = -3; // Augmente la direction horizontale de la balle
+                ballYdir = -6; // Augmente la direction verticale de la balle
+                break;
+            case 3:
+                map = new MapGenerator(5, 9); // Crée une carte avec 5 lignes et 9 colonnes
+                delay = 15; // Augmente encore la vitesse de la balle
+                totalBricks = 45; // Augmente encore le nombre total de briques
+                ballXdir = -4; // Augmente encore la direction horizontale de la balle
+                ballYdir = -8; // Augmente encore la direction verticale de la balle
+                break;
+        }
     }
 
     // Implémentation de la méthode actionPerformed de l'interface ActionListener
