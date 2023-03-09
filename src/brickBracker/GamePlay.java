@@ -94,6 +94,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
             // Passe au niveau suivant
             level++;
             setupLevel(level);
+
         }
 
         if (ballposY > 570) { // Vérifie si la position verticale de la balle dépasse la position maximale du bas de la zone de jeu.
@@ -107,6 +108,13 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 
             g.setFont(new Font("serif", Font.BOLD, 30));
             g.drawString("Appuyer sur Entrer pour Recommencer", 92, 350);
+
+            // Réinitialise le score à 0
+            score = 0;
+
+            // Retourne au niveau le plus bas
+            level = 1;
+            setupLevel(level);
         }
 
         g.dispose(); // dispose permet de libéré des ressources et de nettoyer la mémoire.
@@ -115,9 +123,9 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
     public void setupLevel(int level) {
         switch (level) {
             case 1:
-                map = new MapGenerator(3, 7); // Crée une carte avec 3 lignes et 7 colonnes
+                map = new MapGenerator(2, 3); // Crée une carte avec 3 lignes et 7 colonnes
                 delay = 26; // Définit la vitesse initiale de la balle
-                totalBricks = 21; // Définit le nombre total de briques dans le niveau
+                totalBricks = 6; // Définit le nombre total de briques dans le niveau
                 ballXdir = -2; // Définit la direction horizontale initiale de la balle
                 ballYdir = -4; // Définit la direction verticale initiale de la balle
                 break;

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Rajout section you Won !">
+    <list default="true" id="25f60246-b85e-4f47-a895-9c5fc8dfb5e8" name="Changes" comment="Ajout de niveau '1 à 3 ', + style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/brickBracker/GamePlay.java" afterDir="false" />
     </list>
@@ -93,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678284390767</updated>
       <workItem from="1678284391946" duration="29778000" />
-      <workItem from="1678369273908" duration="761000" />
+      <workItem from="1678369273908" duration="2794000" />
     </task>
     <task id="LOCAL-00001" summary="Début du mini jeu en java. Création main.java avec les obj + début du GamePlay.java">
       <created>1678285731281</created>
@@ -221,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678309298036</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Ajout de niveau '1 à 3 ', + style">
+      <created>1678370096096</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678370096096</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +290,7 @@
     <MESSAGE value="Ajout du style pour le score (dans paint), score fini" />
     <MESSAGE value="Ajout condition style : Game over, Recommencer + Ajout keyEvent recommencer quand appuyer sur Enter" />
     <MESSAGE value="Rajout section you Won !" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rajout section you Won !" />
+    <MESSAGE value="Ajout de niveau '1 à 3 ', + style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de niveau '1 à 3 ', + style" />
   </component>
 </project>
